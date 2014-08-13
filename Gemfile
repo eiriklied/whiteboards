@@ -40,6 +40,7 @@ group :staging, :production do
   gem 'pg'
 end
 
+gem 'aws-sdk' # for paperclip on s3
 gem 'paperclip', '~> 4.1'
 gem 'haml'
 gem 'puma'
