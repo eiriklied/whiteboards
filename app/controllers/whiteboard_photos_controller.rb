@@ -18,6 +18,6 @@ class WhiteboardPhotosController < ApplicationController
 
 private
   def whiteboard_photo_params
-    params.require(:whiteboard_photo).permit(:photo)
+    params.fetch(:whiteboard_photo, {}).permit(:photo)
   end
 end

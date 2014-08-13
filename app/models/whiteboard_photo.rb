@@ -3,9 +3,12 @@ class WhiteboardPhoto < ActiveRecord::Base
                     styles: { large: "1024x1024>" },
                     processors: [:whiteboardify]
 
-  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
-  validates_attachment_presence :photo
-  validates_presence_of :secret_key
+  validates_attachment :photo,
+                       presence: {message: 'You need to upload a photo'},
+                       content_type: {content_type: 'image/jpeg', message: 'You need to upload a jpeg image'}
+
+
+  validates :secret_key, presence: true
   before_validation :ensure_secret_key_present
 
   def to_param
