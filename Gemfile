@@ -45,5 +45,3 @@ gem 'paperclip', '~> 4.1'
 gem 'haml'
 gem 'puma'
 gem 'rack-timeout' # time out puma requests
-
-gem 'postmark-rails' # email
