@@ -3,3 +3,5 @@
 = form_for @whiteboard_photo.whiteboard_emails.build, url: whiteboard_photo_emails_path(@whiteboard_photo), remote: true do |f|
   = f.text_field :address, placeholder: 'your@address.com'
   = f.submit 'Email me Whiteboard!'
+
+= link_to 'Download Whiteboard', download_whiteboard_photo_path(@whiteboard_photo)
