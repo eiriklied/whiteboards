@@ -1,3 +1,5 @@
-Your photo:
-
 = image_tag @whiteboard_photo.photo.url(:large)
+
+= form_for @whiteboard_photo.whiteboard_emails.build, url: whiteboard_photo_emails_path(@whiteboard_photo), remote: true do |f|
+  = f.text_field :address, placeholder: 'your@address.com'
+  = f.submit 'Email me Whiteboard!'

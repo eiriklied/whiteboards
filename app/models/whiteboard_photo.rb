@@ -8,6 +8,8 @@ class WhiteboardPhoto < ActiveRecord::Base
                        content_type: {content_type: 'image/jpeg', message: 'You need to upload a jpeg image'}
 
 
+  has_many :whiteboard_emails
+
   validates :secret_key, presence: true
   before_validation :ensure_secret_key_present
 

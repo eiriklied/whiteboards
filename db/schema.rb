@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812214731) do
+ActiveRecord::Schema.define(version: 20140813212938) do
+
+  create_table "whiteboard_emails", force: true do |t|
+    t.integer  "whiteboard_photo_id"
+    t.string   "address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "whiteboard_emails", ["whiteboard_photo_id"], name: "index_whiteboard_emails_on_whiteboard_photo_id"
 
   create_table "whiteboard_photos", force: true do |t|
     t.string   "secret_key"
