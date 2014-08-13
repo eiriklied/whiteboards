@@ -1,5 +1,5 @@
 class WhiteboardMailer < ActionMailer::Base
-  default from: 'no-reply@whiteboard.herokuapp.com'
+  default from: 'no-reply@whiteboards.herokuapp.com'
 
   def mail_whiteboard_photo(whiteboard_email)
     @whiteboard_email = whiteboard_email
