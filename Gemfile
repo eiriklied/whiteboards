@@ -28,6 +28,11 @@ group :development do
   gem 'foreman'
 end
 
+group :staging, :production do
+  gem 'rails_12factor' # https://devcenter.heroku.com/articles/rails-integration-gems
+  gem 'pg'
+end
+
 gem 'paperclip', '~> 4.1'
 gem 'haml'
 gem 'puma'
