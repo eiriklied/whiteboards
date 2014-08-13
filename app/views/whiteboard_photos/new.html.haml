@@ -1,0 +1,3 @@
+= form_for @whiteboard_photo, url: whiteboard_photos_path, html: { multipart: true } do |f|
+  = f.file_field :photo
+  = f.submit 'Upload!'
